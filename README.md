@@ -1,7 +1,7 @@
 # S3 bucket sanity check.
 
 Simple sanity check for s3 bucket.
-Detects if you have public access to give S3 bucket or not.
+Detects if given Amazon-S3 bucket is publicly accessible or not.
 
 
 Written using Python/boto3/PyInstaller
