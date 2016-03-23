@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="S3 sanity check : S3 bucket sanity check">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>S3 sanity check</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/alexbuz/S3_Sanity_Check">View on GitHub</a>
+
+          <h1 id="project_title">S3 sanity check</h1>
+          <h2 id="project_tagline">S3 bucket sanity check</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/alexbuz/S3_Sanity_Check/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/alexbuz/S3_Sanity_Check/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="s3-bucket-sanity-check" class="anchor" href="#s3-bucket-sanity-check" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>S3 bucket sanity check.</h1>
+
+<p>Simple sanity check for s3 bucket.
+Detects if given Amazon-S3 bucket is publicly accessible or not.</p>
+
+<p>Written using Python/boto3/PyInstaller</p>
+
+<h2>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h2>
+
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Platform</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>32bit</td>
+<td>[0.1.0 beta]</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="purpose" class="anchor" href="#purpose" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Purpose</h2>
+
+<ul>
+<li>When everything falls apart <code>s3sanity</code> helps you confirm that given bucket is not publicly accessible.</li>
+<li>Helps you find readable bucket on Amazon-S3 (for fun).</li>
+</ul>
+
+<h2>
+<a id="how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How it works</h2>
+
+<ul>
+<li>s3sanity.exe tries to read given bucket from Amazon-S3.</li>
+<li>Prints <code>success</code> message if bucket is publicly accessible (readable).</li>
+<li>Prints <code>error</code> message if bucket does not exists or not readable.</li>
+<li>It will not elaborate why read try faied.</li>
+</ul>
+
+<h2>
+<a id="audience" class="anchor" href="#audience" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Audience</h2>
+
+<p>Database/ETL developers, Data Integrators, Data Engineers, Business Analysts, AWS Developers, DevOps</p>
+
+<h2>
+<a id="designated-environment" class="anchor" href="#designated-environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designated Environment</h2>
+
+<p>Pre-Prod (UAT/QA/DEV)</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>C:\Python35-32&gt;dist\s3sanity.exe
+## S3 sanity check.
+##
+## Outputs access status to the screen.
+##
+Usage:
+
+  s3_sanity.exe -b &lt;bucket_name&gt;
+
+    -b [--bucket] -- S3 bucket name.
+
+
+
+"""
+
+</code></pre>
+
+<h2>
+<a id="environment-variables" class="anchor" href="#environment-variables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Environment variables</h2>
+
+<ul>
+<li>No environment variables required because it's a public access test.</li>
+</ul>
+
+<h2>
+<a id="example-sanity-checks" class="anchor" href="#example-sanity-checks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example sanity checks</h2>
+
+<ul>
+<li>Testing if bucket <code>test</code> is readable by everyone.</li>
+</ul>
+
+<pre><code>C:\Python35-32&gt;dist\s3sanity.exe -b test
+#####################################
+NO access OR does NOT exists ("test")
+#####################################
+
+</code></pre>
+
+<p>Bucket <code>test</code> does not exists or unreadable by everyone.</p>
+
+<ul>
+<li>Testing if bucket <code>test2</code> is readable by everyone.</li>
+</ul>
+
+<pre><code>C:\Python35-32&gt;dist\s3sanity.exe -b test2
+
+You HAVE access to "test2"
+
+</code></pre>
+
+<p>Horay! Bucket <code>test2</code> is readable by everyone!</p>
+
+<ul>
+<li>Testing if bucket "elvis" is readable by everyone.</li>
+</ul>
+
+<pre><code>C:\Python35-32&gt;dist\s3sanity.exe -b elvis
+#####################################
+NO access OR does NOT exists ("elvis")
+#####################################
+
+</code></pre>
+
+<p>Too bad. Bucket <code>elvis</code> does not exists or unreadable by everyone.</p>
+
+<ul>
+<li>Testing if bucket "refuse" is readable by everyone.</li>
+</ul>
+
+<pre><code>C:\Python35-32&gt;dist\s3sanity.exe -b refuse
+
+You HAVE access to "refuse"
+
+</code></pre>
+
+<p>Horay! Bucket <code>refuse</code> is readable by everyone!</p>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download</h2>
+
+<ul>
+<li>
+<a href="https://github.com/alexbuz/S3_Sanity_Check/archive/master.zip">Master Release</a> -- <code>s3sanity 0.1.0</code>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">S3 sanity check maintained by <a href="https://github.com/alexbuz">alexbuz</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
