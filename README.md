@@ -14,17 +14,18 @@ Windows|32bit|[0.1.0 beta]
 
 ##Purpose
 
-- Helps you to confirm that given bucket is publickly accessible.
+- When everything falls apart `s3sanity` helps you confirm that given bucket is not publicly accessible.
+- Helps you find readable bucket on Amazon-S3.
 
 ## How it works
-- s3sanity.exe tries to read given bucket for Amazon-S3.
-- Prints success message if bucket is publicly accessible (readable).
-- Prints error message if bucket does not exists or not readable.
+- s3sanity.exe tries to read given bucket from Amazon-S3.
+- Prints `success` message if bucket is publicly accessible (readable).
+- Prints `error` message if bucket does not exists or not readable.
 - It will not elaborate why read try faied.
 
 ##Audience
 
-Database/ETL developers, Data Integrators, Data Engineers, Business Analysts, AWS Developers, DevOps, 
+Database/ETL developers, Data Integrators, Data Engineers, Business Analysts, AWS Developers, DevOps
 
 ##Designated Environment
 Pre-Prod (UAT/QA/DEV)
@@ -99,13 +100,12 @@ Too bad. Bucket `elvis` does not exists or unreadable by everyone.
 
 ```
 C:\Python35-32>dist\s3sanity.exe -b refuse
-#####################################
-NO access OR does NOT exists ("refuse")
-#####################################
+
+You HAVE access to "refuse"
 
 ```
 
-Too bad. Bucket `refuse` does not exists or unreadable by everyone.
+Horay! Bucket `refuse` is readable by everyone!
 
 
 
