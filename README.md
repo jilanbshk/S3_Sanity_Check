@@ -1,6 +1,6 @@
 # S3 bucket sanity check.
 
-Simple sanity check for s3 bucket.
+Simple sanity check for Amazon-S3 bucket.
 Detects if given Amazon-S3 bucket is publicly accessible or not.
 
 
