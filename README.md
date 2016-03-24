@@ -15,7 +15,7 @@ Windows|32bit|[0.1.0 beta]
 
 ##Purpose
 
-- When everything falls apart `s3sanity` helps you confirm that given bucket is not publicly accessible.
+- `s3sanity` helps you confirm that given bucket is not publicly accessible.
 - Helps you find readable bucket on Amazon-S3 (for fun).
 
 ## How it works
