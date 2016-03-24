@@ -4,7 +4,8 @@ Simple sanity check for Amazon-S3 bucket.
 Detects if given Amazon-S3 bucket is publicly accessible or not.
 
 
-Written using Python/boto3/PyInstaller
+Written using Python/boto3
+Compiled with PyInstaller
 
 ##Version
 
