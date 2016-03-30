@@ -1,11 +1,14 @@
 # S3 bucket sanity check.
-
 Simple sanity check for Amazon-S3 bucket.
-Detects if given Amazon-S3 bucket is publicly accessible or not.
 
-
-Written using Python/boto3
-Compiled with PyInstaller
+Features:
+ - Checks if given Amazon-S3 bucket is publicly accessible or not.
+ - No need for Amazon AWS CLI
+ - Works from your OS Windows desktop (command line)
+ - It's executable (s3sanity.exe)  - no need for Python install
+ - It's 32 bit - it will work on any vanilla Windows.
+ - No AWS Access Keys needed. 
+ - Written using Python/boto/PyInstaller
 
 ##Version
 
