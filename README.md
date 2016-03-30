@@ -64,7 +64,7 @@ Usage:
 ###How to check if S3 bucket is publicly readable or not?
 
 
-* Testing if bucket `test` is readable by everyone.
+####Testing if bucket `test` is readable by everyone.
 
 ```
 C:\Python35-32>dist\s3sanity.exe -b test
@@ -77,7 +77,7 @@ NO access OR does NOT exists ("test")
 Bucket `test` does not exists or unreadable by everyone.
 
 
-* Testing if bucket `test2` is readable by everyone.
+####Testing if bucket `test2` is readable by everyone.
 
 ```
 C:\Python35-32>dist\s3sanity.exe -b test2
@@ -89,7 +89,7 @@ You HAVE access to "test2"
 Horay! Bucket `test2` is readable by everyone!
 
 
-* Testing if bucket "elvis" is readable by everyone.
+####Testing if bucket "elvis" is readable by everyone.
 
 ```
 C:\Python35-32>dist\s3sanity.exe -b elvis
@@ -102,7 +102,7 @@ NO access OR does NOT exists ("elvis")
 Too bad. Bucket `elvis` does not exists or unreadable by everyone.
 
 
-* Testing if bucket "refuse" is readable by everyone.
+####Testing if bucket "refuse" is readable by everyone.
 
 ```
 C:\Python35-32>dist\s3sanity.exe -b refuse
