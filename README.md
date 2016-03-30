@@ -59,7 +59,9 @@ Usage:
 * No environment variables required because it's a public access test.
 
 
-##Example sanity checks
+#Example
+
+###How to check if S3 bucket is publicly readable or not?
 
 
 * Testing if bucket `test` is readable by everyone.
