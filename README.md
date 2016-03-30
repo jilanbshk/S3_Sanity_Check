@@ -74,7 +74,7 @@ NO access OR does NOT exists ("test")
 
 ```
 
-Bucket `test` does not exists or unreadable by everyone.
+Bucket `test` does not exist or unreadable by everyone.
 
 
 ####Testing if bucket `test2` is readable by everyone.
@@ -99,7 +99,7 @@ NO access OR does NOT exists ("elvis")
 
 ```
 
-Too bad. Bucket `elvis` does not exists or unreadable by everyone.
+Too bad. Bucket `elvis` does not exist or unreadable by everyone.
 
 
 ####Testing if bucket "refuse" is readable by everyone.
