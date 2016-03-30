@@ -32,12 +32,21 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a id="s3-bucket-sanity-check" class="anchor" href="#s3-bucket-sanity-check" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>S3 bucket sanity check.</h1>
+<a id="s3-bucket-sanity-check-for-windows-cli" class="anchor" href="#s3-bucket-sanity-check-for-windows-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>S3 bucket sanity check for Windows CLI.</h1>
 
-<p>Simple sanity check for s3 bucket.
-Detects if given Amazon-S3 bucket is publicly accessible or not.</p>
+<p>Simple sanity (public access) check for Amazon-S3 bucket.</p>
 
-<p>Written using Python/boto3/PyInstaller</p>
+<p>Features:</p>
+
+<ul>
+<li>Checks if given Amazon-S3 bucket is publicly accessible or not.</li>
+<li>No need for Amazon AWS CLI</li>
+<li>Works from your OS Windows desktop (command line)</li>
+<li>It's executable (s3sanity.exe)  - no need for Python install</li>
+<li>It's 32 bit - it will work on any vanilla Windows.</li>
+<li>No AWS Access Keys needed. </li>
+<li>Written using Python/boto/PyInstaller</li>
+</ul>
 
 <h2>
 <a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h2>
@@ -63,7 +72,8 @@ Detects if given Amazon-S3 bucket is publicly accessible or not.</p>
 <a id="purpose" class="anchor" href="#purpose" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Purpose</h2>
 
 <ul>
-<li>When everything falls apart <code>s3sanity</code> helps you confirm that given bucket is not publicly accessible.</li>
+<li>
+<code>s3sanity</code> helps you confirm that given bucket is not publicly accessible.</li>
 <li>Helps you find readable bucket on Amazon-S3 (for fun).</li>
 </ul>
 
@@ -114,12 +124,14 @@ Usage:
 <li>No environment variables required because it's a public access test.</li>
 </ul>
 
-<h2>
-<a id="example-sanity-checks" class="anchor" href="#example-sanity-checks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example sanity checks</h2>
+<h1>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h1>
 
-<ul>
-<li>Testing if bucket <code>test</code> is readable by everyone.</li>
-</ul>
+<h3>
+<a id="how-to-check-if-s3-bucket-is-publicly-readable-or-not" class="anchor" href="#how-to-check-if-s3-bucket-is-publicly-readable-or-not" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to check if S3 bucket is publicly readable or not?</h3>
+
+<h4>
+<a id="testing-if-bucket-test-is-readable-by-everyone" class="anchor" href="#testing-if-bucket-test-is-readable-by-everyone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing if bucket <code>test</code> is readable by everyone.</h4>
 
 <pre><code>C:\Python35-32&gt;dist\s3sanity.exe -b test
 #####################################
@@ -128,11 +140,10 @@ NO access OR does NOT exists ("test")
 
 </code></pre>
 
-<p>Bucket <code>test</code> does not exists or unreadable by everyone.</p>
+<p>Bucket <code>test</code> does not exist or unreadable by everyone.</p>
 
-<ul>
-<li>Testing if bucket <code>test2</code> is readable by everyone.</li>
-</ul>
+<h4>
+<a id="testing-if-bucket-test2-is-readable-by-everyone" class="anchor" href="#testing-if-bucket-test2-is-readable-by-everyone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing if bucket <code>test2</code> is readable by everyone.</h4>
 
 <pre><code>C:\Python35-32&gt;dist\s3sanity.exe -b test2
 
@@ -142,9 +153,8 @@ You HAVE access to "test2"
 
 <p>Horay! Bucket <code>test2</code> is readable by everyone!</p>
 
-<ul>
-<li>Testing if bucket "elvis" is readable by everyone.</li>
-</ul>
+<h4>
+<a id="testing-if-bucket-elvis-is-readable-by-everyone" class="anchor" href="#testing-if-bucket-elvis-is-readable-by-everyone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing if bucket "elvis" is readable by everyone.</h4>
 
 <pre><code>C:\Python35-32&gt;dist\s3sanity.exe -b elvis
 #####################################
@@ -153,11 +163,10 @@ NO access OR does NOT exists ("elvis")
 
 </code></pre>
 
-<p>Too bad. Bucket <code>elvis</code> does not exists or unreadable by everyone.</p>
+<p>Too bad. Bucket <code>elvis</code> does not exist or unreadable by everyone.</p>
 
-<ul>
-<li>Testing if bucket "refuse" is readable by everyone.</li>
-</ul>
+<h4>
+<a id="testing-if-bucket-refuse-is-readable-by-everyone" class="anchor" href="#testing-if-bucket-refuse-is-readable-by-everyone" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing if bucket "refuse" is readable by everyone.</h4>
 
 <pre><code>C:\Python35-32&gt;dist\s3sanity.exe -b refuse
 
