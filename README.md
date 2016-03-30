@@ -1,5 +1,5 @@
-# S3 bucket sanity check.
-Simple sanity check for Amazon-S3 bucket.
+# S3 bucket sanity check for Windows CLI.
+Simple sanity (public access) check for Amazon-S3 bucket.
 
 Features:
  - Checks if given Amazon-S3 bucket is publicly accessible or not.
