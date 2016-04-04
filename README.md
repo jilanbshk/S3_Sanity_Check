@@ -118,3 +118,63 @@ Horay! Bucket `refuse` is readable by everyone!
 
 ##Download
 * [Master Release](https://github.com/alexbuz/S3_Sanity_Check/archive/master.zip) -- `s3sanity 0.1.0`
+* 
+
+
+#FAQ
+#  
+#### Can it tell if S3 bucket is unreadable?
+No, it cannot really tell if it's unreadable or simply does not exists.
+
+#### Do I need a password to use it?
+No, no passwords or access keys.
+We are testing public read access to a bucket.
+
+#### How does it work?
+I use Python boto (AWS API for Python) module to interact with AWS.
+Boto checks header of the bucket. If successful - it's readable.
+```
+s3.meta.client.head_bucket(Bucket=bucket.name)
+```
+
+#### What are the other ways to do it?
+You can use AWS CLI `aws s3api` to do the same.
+
+
+#### Can I check multiple buckets for readability?
+No. To do you have to call `s3sanity.exe` for each S3 bucket.
+
+#### Does check contents of the bucket for readability?
+No
+
+#### Does it create any manifest files?
+No
+
+#### Can I use Linux.
+No, only OS Windows for now.
+
+#### What technology was used to create this tool
+I used Python and Boto (AWS API for Python) to write it.
+
+#### Where are the sources?
+Please, contact me for sources.
+
+#### Can you modify functionality and add features?
+Yes, please, ask me for new features.
+
+#### What other AWS tools you've created?
+- [CSV_Loader_For_Redshift] (https://github.com/alexbuz/CSV_Loader_For_Redshift/blob/master/README.md) - Append CSV data to Amazon-Redshift from Windows.
+- [EC2_Metrics_Plotter](https://github.com/alexbuz/EC2_Metrics_Plotter/blob/master/README.md) - plots any CloudWatch EC2 instance  metric stats.
+- [S3_File_Uploader](https://github.com/alexbuz/S3_File_Uploader/blob/master/README.md) - uploads file from Windows to S3.
+
+#### Do you have any AWS Certifications?
+Yes, [AWS Certified Developer (Associate)](https://raw.githubusercontent.com/alexbuz/FAQs/master/images/AWS_Ceritied_Developer_Associate.png)
+
+#### Can you create similar/custom data tool for our business?
+Yes, you can PM me here or email at `alex_buz@yahoo.com`.
+I'll get back to you within hours.
+
+###Links
+ - [Employment FAQ](https://github.com/alexbuz/FAQs/blob/master/README.md)
+ - 
+ 
