@@ -183,6 +183,101 @@ You HAVE access to "refuse"
 <li>
 <a href="https://github.com/alexbuz/S3_Sanity_Check/archive/master.zip">Master Release</a> -- <code>s3sanity 0.1.0</code>
 </li>
+<li>
+</ul>
+
+<h1>
+<a id="faq" class="anchor" href="#faq" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FAQ</h1>
+
+<h4>
+<a id="can-it-tell-if-s3-bucket-is-unreadable" class="anchor" href="#can-it-tell-if-s3-bucket-is-unreadable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can it tell if S3 bucket is unreadable?</h4>
+
+<p>No, it cannot really tell if it's unreadable or simply does not exists.</p>
+
+<h4>
+<a id="do-i-need-a-password-to-use-it" class="anchor" href="#do-i-need-a-password-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Do I need a password to use it?</h4>
+
+<p>No, no passwords or access keys.
+We are testing public read access to a bucket.</p>
+
+<h4>
+<a id="how-does-it-work" class="anchor" href="#how-does-it-work" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How does it work?</h4>
+
+<p>I use Python boto (AWS API for Python) module to interact with AWS.
+Boto checks header of the bucket. If successful - it's readable.</p>
+
+<pre><code>s3.meta.client.head_bucket(Bucket=bucket.name)
+</code></pre>
+
+<h4>
+<a id="what-are-the-other-ways-to-do-it" class="anchor" href="#what-are-the-other-ways-to-do-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What are the other ways to do it?</h4>
+
+<p>You can use AWS CLI <code>aws s3api</code> to do the same.</p>
+
+<h4>
+<a id="can-i-check-multiple-buckets-for-readability" class="anchor" href="#can-i-check-multiple-buckets-for-readability" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can I check multiple buckets for readability?</h4>
+
+<p>No. To do you have to call <code>s3sanity.exe</code> for each S3 bucket.</p>
+
+<h4>
+<a id="does-check-contents-of-the-bucket-for-readability" class="anchor" href="#does-check-contents-of-the-bucket-for-readability" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Does check contents of the bucket for readability?</h4>
+
+<p>No</p>
+
+<h4>
+<a id="does-it-create-any-manifest-files" class="anchor" href="#does-it-create-any-manifest-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Does it create any manifest files?</h4>
+
+<p>No</p>
+
+<h4>
+<a id="can-i-use-linux" class="anchor" href="#can-i-use-linux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can I use Linux.</h4>
+
+<p>No, only OS Windows for now.</p>
+
+<h4>
+<a id="what-technology-was-used-to-create-this-tool" class="anchor" href="#what-technology-was-used-to-create-this-tool" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What technology was used to create this tool</h4>
+
+<p>I used Python and Boto (AWS API for Python) to write it.</p>
+
+<h4>
+<a id="where-are-the-sources" class="anchor" href="#where-are-the-sources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Where are the sources?</h4>
+
+<p>Please, contact me for sources.</p>
+
+<h4>
+<a id="can-you-modify-functionality-and-add-features" class="anchor" href="#can-you-modify-functionality-and-add-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can you modify functionality and add features?</h4>
+
+<p>Yes, please, ask me for new features.</p>
+
+<h4>
+<a id="what-other-aws-tools-youve-created" class="anchor" href="#what-other-aws-tools-youve-created" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What other AWS tools you've created?</h4>
+
+<ul>
+<li>
+<a href="https://github.com/alexbuz/CSV_Loader_For_Redshift/blob/master/README.md">CSV_Loader_For_Redshift</a> - Append CSV data to Amazon-Redshift from Windows.</li>
+<li>
+<a href="https://github.com/alexbuz/EC2_Metrics_Plotter/blob/master/README.md">EC2_Metrics_Plotter</a> - plots any CloudWatch EC2 instance  metric stats.</li>
+<li>
+<a href="https://github.com/alexbuz/S3_File_Uploader/blob/master/README.md">S3_File_Uploader</a> - uploads file from Windows to S3.</li>
+</ul>
+
+<h4>
+<a id="do-you-have-any-aws-certifications" class="anchor" href="#do-you-have-any-aws-certifications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Do you have any AWS Certifications?</h4>
+
+<p>Yes, <a href="https://raw.githubusercontent.com/alexbuz/FAQs/master/images/AWS_Ceritied_Developer_Associate.png">AWS Certified Developer (Associate)</a></p>
+
+<h4>
+<a id="can-you-create-similarcustom-data-tool-for-our-business" class="anchor" href="#can-you-create-similarcustom-data-tool-for-our-business" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can you create similar/custom data tool for our business?</h4>
+
+<p>Yes, you can PM me here or email at <code>alex_buz@yahoo.com</code>.
+I'll get back to you within hours.</p>
+
+<h3>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h3>
+
+<ul>
+<li><a href="https://github.com/alexbuz/FAQs/blob/master/README.md">Employment FAQ</a></li>
+<li>
 </ul>
       </section>
     </div>
